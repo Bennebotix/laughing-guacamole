@@ -8,18 +8,18 @@ document.querySelector('#notif').onclick = () => {
 
 document.querySelector('#dis').innerText = localStorage.getItem('data') ? localStorage.getItem('data') : 'None';
 
-document.querySelector('b1').onclick = () => {
+document.querySelector('#b1').onclick = () => {
   localStorage.setItem('data', 1);
 }
 
-document.querySelector('b2').onclick = () => {
+document.querySelector('#b2').onclick = () => {
   localStorage.setItem('data', 2);
 }
 
-document.querySelector('b3').onclick = () => {
+document.querySelector('#b3').onclick = () => {
   localStorage.setItem('data', 3);
 }
 
-document.querySelector('cls').onclick = () => {
+document.querySelector('#cls').onclick = () => {
   localStorage.setItem('data', undefined);
 }
