@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon" href="/images/icon512_maskable.png" />
+        <link rel="apple-touch-icon" href="/images/icon512_roounded.png" />
+        <link rel="icon" href="/images/icon512_maskable.png?" type="image/png">
+        <link rel="shortcut icon" href="/images/icon512_maskable.png?" type="image/png">
+        <meta name="apple-mobile-web-app-status-bar" content="black" />
+        <meta name="theme-color" content="black" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        
+        <!-- DOMLESS DEPS -->
+        <script>
+            var serviceWorkerRegistration;
+            
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function() {
+                    navigator.serviceWorker
+                    .register("/serviceWorker.js")
+                    .then(res => {        
+                        console.log("service worker registered", res);      
+                        serviceWorkerRegistration = res;
+                    })
+                    .catch(err => console.log("service worker not registered", err))
+                })
+            }
+            
+            var rebootServiceWorker = () => {
+                if (navigator.onLine) {
+                    serviceWorkerRegistration.unregister();
+                    localStorage.clear();
+                    window.location.reload();
+                } else {
+                    cli.write('Client is not online!');
+                }
+            }
+        </script>
+        <!-- END -->
+        
+        <title>[Title]</title>
+    </head>
+    <body>
+    </body>
+</html>
