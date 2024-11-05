@@ -4,7 +4,7 @@ const notif = (title, body, icon) => { // Icons don't properly work, they just t
 
 document.querySelector('#notif').onclick = () => {
   notif('Title', 'Body', '');
-});
+};
 
 if (localStorage.getItem('data')) {
   document.querySelector('#dis').innerText = localStorage.getItem('data');
