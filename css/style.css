@@ -17,3 +17,12 @@ div {
   width: fit-content;
   height: fit-content;
 }
+
+button {
+  border: none;
+  padding: 3px;
+  backgorund-color: black;
+  color: white;
+  font-family: Courier New;
+  border-radius: 3px;
+}
