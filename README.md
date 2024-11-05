@@ -1,1 +1,1 @@
-(PWA Maker)[https://www.google.com]
+[PWA Maker](https://www.google.com)
