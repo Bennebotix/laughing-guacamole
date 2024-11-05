@@ -5,7 +5,10 @@ const assets = [
   "/images/icon512_maskable.png",
   "/images/icon512_rounded.png",
   "/css/style.css",
-  "/js/app.js"
+  "/js/app.js",
+  "serviceWorker.js",
+  "manifest.json",
+  "README.md"
 ]
 
 self.addEventListener('notificationclick', function (event) {
