@@ -6,7 +6,11 @@ document.querySelector('#notif').onclick = () => {
   notif('Title', 'Body', '');
 });
 
-document.querySelector('#dis').innerText = localStorage.getItem('data') ? localStorage.getItem('data') : 'None';
+if (localStorage.getItem('data')) {
+  document.querySelector('#dis').innerText = localStorage.getItem('data');
+} else {
+  document.querySelector('#dis').innerText =  'None';
+}
 
 document.querySelector('#b1').onclick = () => {
   localStorage.setItem('data', 1);
